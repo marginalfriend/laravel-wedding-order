@@ -31,4 +31,29 @@
 		font-size: 1.8em;
 		font-weight: 450;
 	}
+
+	table td, th{
+		padding: 0.5em;
+		border: 0.5px solid slategray;
+	}
+
+	button {
+		font-size: small;
+		padding: 0.2em 0.3em;
+		color: white;
+		border-radius: 5px;
+		background-color: rgb(14 116 144);
+	}
+
+	#danger {
+		background-color: brown;
+	}
+
+	#danger:hover {
+		background-color: red;
+	}
+
+	button:hover {
+		background-color: rgb(6 182 212);
+	}
 }

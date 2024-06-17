@@ -16,12 +16,12 @@
 				Orders
 			</button>
 		</a>
-		<a>
+		<a href="/packages">
 			<button class="text-white border-0 bg-cyan-700 p-2 rounded-md hover:bg-cyan-500">
 				Wedding Packages
 			</button>
 		</a>
-		<a>
+		<a href="/customers">
 			<button class="text-white border-0 bg-cyan-700 p-2 rounded-md hover:bg-cyan-500">
 				Customers
 			</button>
