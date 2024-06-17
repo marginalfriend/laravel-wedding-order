@@ -34,11 +34,11 @@ class OrderDetail extends Model
     // Define relationships
     public function order()
     {
-        return $this->belongsTo(Order::class, 'order_id', 'order_id');
+        return $this->belongsTo(Order::class);
     }
 
     public function package()
     {
-        return $this->belongsTo(WeddingPackage::class, 'package_id', 'package_id');
+        return $this->belongsTo(WeddingPackage::class);
     }
 }

@@ -38,11 +38,11 @@ class Order extends Model
     // Define relationships
     public function customer()
     {
-        return $this->belongsTo(Customer::class, 'customer_id', 'customer_id');
+        return $this->belongsTo(Customer::class);
     }
 
     public function package()
     {
-        return $this->belongsTo(WeddingPackage::class, 'package_id', 'package_id');
+        return $this->belongsTo(WeddingPackage::class);
     }
 }
