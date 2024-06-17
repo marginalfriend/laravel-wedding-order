@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeddingPackageController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,25 @@ use App\Http\Controllers\WeddingPackageController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Customers - VIEW
+Route::get('/customers', [CustomerController::class, 'index']) -> name('customers.index');
+
+// Customers - CREATE
+Route::get('/customers/create', [CustomerController::class, 'create']) -> name('customers.create');
+Route::post('/customers', [CustomerController::class, 'store']) -> name('customers.store');
+
+// Customers - UPDATE
+Route::get('/customers/{customer}/edit', [CustomerController::class, 'edit']) -> name('customers.edit');
+Route::put('/customers/{customer}/update', [CustomerController::class, 'update']) -> name('customers.update');
+
+
+// Customers - DELETE
+Route::delete('customers/{customer}/destroy', [CustomerController::class, 'destroy']) -> name('customers.destroy');
+
+
+
 
 
 // Wedding Packages - VIEW

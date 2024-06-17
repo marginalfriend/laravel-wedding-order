@@ -45,6 +45,8 @@ class WeddingPackageController extends Controller
 		]);
 
 		$package->update($data);
+
+		return redirect(route('packages.index'))->with('success', 'Wedding Package Updated Successfully');
 	}
 
 	public function destroy(WeddingPackage $package) {
