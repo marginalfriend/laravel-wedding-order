@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('WeddingPackages', function (Blueprint $table) {
-			$table -> id('package_id');
-			$table -> string('name');
-			$table -> text('description');
-			$table -> decimal('price');
+        Schema::create('OrderDetails', function (Blueprint $table) {
+			$table -> id('order_detail_id');
+			$table -> foreign('order_id') -> references('order_id') -> on('Orders');
+			$table -> foreign('package_id') -> references('package_id') -> on('WeddingPackages');
+			$table -> integer('quantity');
 		});
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('WeddingPackages');
+        Schema::dropIfExists('OrderDetails');
     }
 };

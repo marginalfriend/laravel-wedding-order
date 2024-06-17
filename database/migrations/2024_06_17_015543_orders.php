@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('Orders', function (Blueprint $table) {
 			$table -> id('order_id');
-			$table -> foreign('customer_id') -> references('customer_id') -> on('customers');
-			$table -> foreign('package_id') -> references('package_id') -> on('wedding_packages');
+			$table -> foreign('customer_id') -> references('customer_id') -> on('Customers');
+			$table -> foreign('package_id') -> references('package_id') -> on('WeddingPackages');
 			$table -> enum('status'. ['Pending', 'Approved', 'Cancelled']) -> default('Pending');
 		});
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('Orders');
     }
 };
